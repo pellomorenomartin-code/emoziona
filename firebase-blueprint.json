@@ -1,0 +1,68 @@
+{
+  "entities": {
+    "EmotionCheckIn": {
+      "title": "EmotionCheckIn",
+      "description": "A record of a user's emotional state at a specific time.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "uid": { "type": "string", "description": "The user's unique ID." },
+        "timestamp": { "type": "number" },
+        "quadrant": { "type": "string", "enum": ["red", "yellow", "blue", "green"] },
+        "emotion": { "type": "string" },
+        "note": { "type": "string" },
+        "energy": { "type": "number" },
+        "pleasantness": { "type": "number" },
+        "intensity": { "type": "number" },
+        "bodyLocation": { "type": "string" },
+        "bodySensation": { "type": "string" }
+      },
+      "required": ["uid", "timestamp", "quadrant", "emotion", "energy", "pleasantness", "intensity"]
+    },
+    "DailyReflection": {
+      "title": "DailyReflection",
+      "description": "A daily journal entry written by the user.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "uid": { "type": "string", "description": "The user's unique ID." },
+        "date": { "type": "string", "format": "date" },
+        "timestamp": { "type": "number" },
+        "content": { "type": "string" },
+        "moodSummary": { "type": "string", "enum": ["red", "yellow", "blue", "green"] }
+      },
+      "required": ["uid", "date", "timestamp", "content"]
+    },
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Information about the user.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "school": { "type": "string" },
+        "grade": { "type": "string" },
+        "tutor": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "avatar": { "type": "string" },
+        "notificationsEnabled": { "type": "boolean" },
+        "language": { "type": "string", "enum": ["eu", "es"] }
+      },
+      "required": ["uid", "email"]
+    }
+  },
+  "firestore": {
+    "/checkins/{checkInId}": {
+      "schema": "EmotionCheckIn",
+      "description": "Collection of emotional check-ins."
+    },
+    "/reflections/{reflectionId}": {
+      "schema": "DailyReflection",
+      "description": "Collection of daily reflections."
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile information."
+    }
+  }
+}
