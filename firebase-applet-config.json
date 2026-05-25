@@ -1,10 +1,10 @@
 {
-  "projectId": "gen-lang-client-0933272919",
-  "appId": "1:1093787466602:web:1883c18291983d11f3c313",
-  "apiKey": "AIzaSyDGR5huXKCPWouLmiqUQ4m5aGpBgd6-_wE",
-  "authDomain": "gen-lang-client-0933272919.firebaseapp.com",
-  "firestoreDatabaseId": "ai-studio-38c86648-8ea5-4aa2-bc54-e0a557efc45f",
-  "storageBucket": "gen-lang-client-0933272919.firebasestorage.app",
-  "messagingSenderId": "1093787466602",
-  "measurementId": ""
+  "projectId": "emoziona",
+  "appId": "1:867917524324:web:09eec6509b676771291e71",
+  "apiKey": "AIzaSyCAKVb66vPEc8yQNA21N9rJO9-Q5Tvq5Cg",
+  "authDomain": "emoziona.firebaseapp.com",
+  "firestoreDatabaseId": "(default)",
+  "storageBucket": "emoziona.firebasestorage.app",
+  "messagingSenderId": "867917524324",
+  "measurementId": "G-C7232RT3DW"
 }
